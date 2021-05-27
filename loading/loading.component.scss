@@ -21,7 +21,7 @@ $loading-color: #111111;
         stroke: currentColor;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke-dasharray: 325;
+        stroke-dasharray: 900;
         animation: dash 1.5s linear infinite
     }
 
@@ -40,6 +40,6 @@ $loading-color: #111111;
 
 @keyframes dash {
     to {
-        stroke-dashoffset: 650;
+        stroke-dashoffset: 1800;
     }
 }
