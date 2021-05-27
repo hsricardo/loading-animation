@@ -1,0 +1,73 @@
+@import "./src/styles";
+
+$loading-size: 8em;
+
+$loading-color: #111111;
+$loading-kmm: #99211F;
+$loading-rumo: #003865;
+$loading-brado: #008A88;
+
+.loading-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+
+    .loading-kmm {
+        color: $loading-kmm;
+    }
+    .loading-rumo {
+        color: $loading-rumo;
+    }
+    .loading-brado {
+        color: $loading-brado;
+    }
+}
+
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    color: $loading-color;
+
+    .loading-logo {
+        position: relative;
+        top: - $loading-size;
+        width: $loading-size;
+        height: $loading-size;
+        overflow: visible;
+        stroke-width: .5em;
+        fill: none;
+        // stroke: $loading-color;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 325;
+        
+        animation: dash 1.5s linear infinite
+    }
+
+    .loading-background {
+        width: $loading-size;
+        height: $loading-size;
+        overflow: visible;
+        fill: none;
+        stroke-width: 8px;
+        // stroke: $loading-color;
+        stroke: currentColor;
+        opacity: .3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 650;
+    }
+}
